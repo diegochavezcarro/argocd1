@@ -26,7 +26,7 @@ Copiarla y hacer login con username admin y esa password.
 
 4. Desplegar una Application de ArgoCD:
 
-kubectl apply -f guestbook.yaml
+kubectl apply -f guestbook-app.yaml
 
 Observar el dashboard de ArgoCD.
 
