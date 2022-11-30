@@ -24,13 +24,7 @@ kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.pas
 
 Copiarla y hacer login con username admin y esa password.
 
-4. Desplegar el Application:
-
-Primero bajarselo:
-
-wget https://raw.githubusercontent.com/diegochavezcarro/argocd1/main/guestbook-app.yaml
-
-Instalarlo:
+4. Desplegar una Application de ArgoCD:
 
 kubectl apply -f guestbook.yaml
 
