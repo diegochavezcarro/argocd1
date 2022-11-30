@@ -35,6 +35,6 @@ Observar el dashboard de ArgoCD.
 6. Borrar en el dashboard el deployment. Sincronizar. Lo mismo por terminal y de vuelta Sincronizar
 el dashboard.
 
-7. Agregar una replica mas en el deployment. Sincronizar y observar como se actualiza.
+7. Agregar una replica mas en el deployment (en el repo de git!). Sincronizar y observar como se actualiza.
 
 
