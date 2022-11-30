@@ -1,7 +1,12 @@
 # argocd1
-https://argo-cd.readthedocs.io/en/stable/getting_started/
 
-1. Instalar ArgoCD:
+Bajarse el repo actual
+
+git clone https://github.com/diegochavezcarro/argocd1.git
+
+Entrar en el directorio argocd1
+
+1. Instalar ArgoCD (https://argo-cd.readthedocs.io/en/stable/getting_started/):
 
 kubectl create namespace argocd
 
