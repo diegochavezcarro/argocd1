@@ -37,4 +37,30 @@ el dashboard.
 
 7. Agregar una replica mas en el deployment (en el repo de git!). Sincronizar y observar como se actualiza.
 
+8. Activar la sincronizacion con syncPolicy automated, agregando al guestbook-app.yaml la parte de 
+syncPolicy, dentro del contexto spec, debajo de project por ejemplo:
+
+  destination:
+    server: 'https://kubernetes.default.svc'
+    namespace: default
+  project: default
+  syncPolicy:
+    automated:
+      selfHeal: true
+      prune: true
+ 
+ El selfHeal hara que si borramos algo de forma manual en el cluster ese cambio se volvera
+ atras, respetando como fuente de verdad al repositorio y el prune hara que incluso se borren
+ recursos en el cluster cuando lo hagamos en el repo.
+ No es necesario cambiar el codigo en el git, de hecho este archivo no es revisado por ArgoCD (solo
+ especificamos el path guestbook), cambiar al archivo de forma local y desplegarlo:
+ 
+kubectl apply -f guestbook-app.yaml
+
+9. Como ejemplo borrar al deploy en el cluster y ver que sucede en instantes:
+
+kubectl delete deploy guestbook-ui
+
+10. Modificar en el repo para agregar una replica mas al deploy. Esperar unos 3 minutos y
+observar el cambio, sin tener que sincronizar manualmente en el ArgoCD
 
